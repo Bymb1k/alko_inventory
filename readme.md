@@ -18,23 +18,28 @@
 
 2. **Создай и активируй виртуальное окружение:**
 
+   ```bash
     python -m venv venv
     source venv/bin/activate  # или venv\Scripts\activate на Windows
 
 3. **Установи зависимости:**
 
+    ```bash
     pip install -r requirements.txt
 
 4. **Выполни миграции:**    
 
+    ```bash
     python manage.py migrate
 
 5. **Выполни миграции:** 
 
+    ```bash
     python manage.py runserver
 
 6. **Выполни миграции:**
 
+    ```bash
     http://127.0.0.1:8000/
 
 ## Структура проекта
