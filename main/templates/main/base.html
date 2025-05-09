@@ -1,24 +1,26 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/style_1.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <title>{% block title %}Мой сайт{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
 <body>
-    <header>
-        <h1>Заголовок сайта</h1>
-        <hr>
-    </header>
 
-    <main>
-        {% block content %}
-        <!-- Контент страницы -->
-        {% endblock %}
-    </main>
+    <div class="page-background">
+        <header class="header">
+            <h1>🍷 Учёт алкоголя</h1>
+        </header>
 
-    <footer>
-        <hr>
-        <p>© 2025 Мой сайт</p>
-    </footer>
+        <main class="content">
+            {% block content %}
+            {% endblock %}
+        </main>
+    </div>
+
 </body>
 </html>

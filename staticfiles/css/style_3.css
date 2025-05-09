@@ -1,0 +1,161 @@
+/* Общий стиль для body */
+body {
+    background-image: url("{% static 'images/bottles_3.jpg' %}");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    color: white; /* Чтобы текст был читаем */
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Заголовок */
+h1 {
+    text-align: center;
+    font-size: 36px;
+    color: #fff;
+    margin-top: 50px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* Стиль кнопок */
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 50px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);  /* Легкая тень для кнопок */
+}
+
+/* Стиль кнопки "Сохранить" */
+.btn-save {
+    background: linear-gradient(135deg, #4CAF50, #2E7D32);
+    color: white;
+}
+
+.btn-save:hover {
+    background: linear-gradient(135deg, #45a049, #388E3C);
+    transform: scale(1.05);
+}
+
+.btn-save:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+}
+
+.btn-save:hover:before {
+    opacity: 1;
+}
+
+/* Стиль кнопки "Назад" */
+.btn-back {
+    background: linear-gradient(135deg, #2196F3, #1976D2);
+    color: white;
+    margin-top: 15px;
+}
+
+.btn-back:hover {
+    background: linear-gradient(135deg, #1565C0, #0d47a1);
+    transform: scale(1.05);
+}
+
+.btn-back:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+}
+
+.btn-back:hover:before {
+    opacity: 1;
+}
+
+/* Эффекты при наведении на кнопки */
+.btn:hover {
+    transform: translateY(-5px); /* Немного поднимаем кнопку при наведении */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Стиль для формы */
+form {
+    width: 70%;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Стиль для всех полей формы */
+form input, form select, form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+/* Стиль для всех полей формы при фокусе */
+form input:focus, form select:focus, form textarea:focus {
+    border-color: #2196F3;
+    outline: none;
+}
+
+/* Стили для кнопок внутри формы */
+form .btn {
+    width: 100%;
+    font-size: 18px;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+/* Стиль контейнера */
+.container {
+    background-color: rgba(0, 0, 0, 0.6); /* полупрозрачный фон */
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 50px;
+}
+
+/* Мобильная адаптация */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    .btn {
+        padding: 12px 25px;
+        font-size: 16px;
+    }
+
+    form {
+        width: 90%;
+    }
+}

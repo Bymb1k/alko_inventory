@@ -1,0 +1,103 @@
+body {
+    background-image: url("../images/bottles_1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    color: rgb(255, 255, 255); /* Чтобы текст был читаем */
+}
+
+.container {
+    background-color: rgba(0, 0, 0, 0.6); /* полупрозрачный фон */
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 50px;
+}
+/* Общий стиль кнопок */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.3s ease;
+    color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Кнопка "Рассчитать" */
+.btn-calc {
+    background: linear-gradient(135deg, #FF9800, #F57C00);
+}
+
+.btn-calc:hover {
+    background: linear-gradient(135deg, #FB8C00, #EF6C00);
+    transform: scale(1.05);
+}
+
+/* Кнопка "Назад" */
+.btn-back {
+    background: linear-gradient(135deg, #2196F3, #1976D2);
+    margin-top: 20px;
+}
+
+.btn-back:hover {
+    background: linear-gradient(135deg, #1E88E5, #1565C0);
+    transform: scale(1.05);
+}
+.delete-confirmation {
+    background-color: rgba(0, 0, 0, 0.85); /* почти чёрный, полупрозрачный */
+    color: white;
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 600px;
+    margin: 50px auto; /* центрирование */
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 14px 30px;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 35px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    margin: 10px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.btn i {
+    font-size: 20px;
+}
+
+.btn-danger {
+    background: linear-gradient(135deg, #e53935, #b71c1c);
+    color: white;
+}
+
+.btn-danger:hover {
+    background: #c62828;
+    transform: scale(1.05);
+}
+
+.btn-cancel {
+    background: linear-gradient(135deg, #9e9e9e, #616161);
+    color: white;
+}
+
+.btn-cancel:hover {
+    background: #757575;
+    transform: scale(1.05);
+}

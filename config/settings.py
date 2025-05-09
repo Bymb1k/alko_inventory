@@ -114,10 +114,19 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
+import os
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'  # Путь для доступа к статическим файлам через URL
+STATICFILES_DIRS = [BASE_DIR / 'static',]  # Путь к папке со статиками, если у тебя она в корне проекта
+STATIC_ROOT = BASE_DIR / 'staticfiles'  # Каталог для собранных статических файлов
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+import os
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

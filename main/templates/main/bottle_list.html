@@ -1,0 +1,31 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+<body>
+    <!-- Контейнер для фона всей страницы -->
+    <div class="background-container">
+        
+        <!-- Контейнер для картинки поверх фона -->
+        <div class="image-container">
+            <img src="{% static 'images/invent.png' %}" alt="Your image" class="centered-image">
+        </div>
+
+        <!-- Основной контейнер с контентом -->
+        <div class="container">
+            <h1>Список алкогольных напитков</h1>
+            <ul>
+                {% for bottle in bottles %}
+                    <li>
+                        <span class="bottle-name">{{ bottle.name }}</span> -
+                        <a href="{% url 'bottle_edit' bottle.id %}" class="btn btn-edit">Редактировать</a> |
+                        <a href="{% url 'calculate_remaining' bottle.id %}" class="btn btn-calculate">Рассчитать</a> |
+                        <a href="{% url 'bottle_delete' bottle.id %}" class="btn btn-delete">Удалить</a>
+                    </li>
+                {% endfor %}
+            </ul>
+
+            <br>
+            <a href="{% url 'bottle_create' %}" class="btn btn-create">Добавить новую бутылку</a>
+        </div>
+    </div>
+</body>

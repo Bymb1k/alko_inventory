@@ -1,0 +1,18 @@
+{% extends 'main/base.html' %}
+
+{% block title %}Удалить бутылку{% endblock %}
+
+{% block content %}
+    <div class="delete-confirmation">
+        <h2>Вы уверены, что хотите удалить "{{ bottle.name }}"?</h2>
+        <form method="post">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-danger">
+                <i class="fas fa-trash-alt"></i> Да, удалить
+            </button>
+            <a href="{% url 'bottle_list' %}" class="btn btn-cancel">
+                <i class="fas fa-times"></i> Отмена
+            </a>
+        </form>
+    </div>
+{% endblock %}

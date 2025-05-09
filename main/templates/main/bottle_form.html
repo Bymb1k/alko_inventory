@@ -1,0 +1,22 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/style_3.css' %}">
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма бутылки</title>
+</head>
+<body>
+    <h1>{% if form.instance.id %}Редактировать бутылку{% else %}Добавить новую бутылку{% endif %}</h1>
+
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-save">Сохранить</button>
+    </form>
+
+    <br>
+    <a href="{% url 'bottle_list' %}" class="btn btn-back">Назад</a>
+</body>
+</html>

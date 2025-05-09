@@ -1,0 +1,15 @@
+body {
+    background-image: url("../images/bottles.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    color: white; /* Чтобы текст был читаем */
+}
+
+.container {
+    background-color: rgba(0, 0, 0, 0.6); /* полупрозрачный фон */
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 50px;
+}

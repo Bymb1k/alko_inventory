@@ -1,0 +1,124 @@
+/* Основной стиль для body */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Фоновый цвет для body, если картинка не загрузится */
+}
+
+/* Контейнер для фона всей страницы */
+.background-container {
+    background-image: url("/static/images/background.jpg") !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-attachment: fixed !important;
+    height: 100vh !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%; 
+}
+
+/* Контейнер для картинки */
+.image-container {
+    position: absolute;  /* Размещаем картинку поверх фона */
+    top: 5px;  /* Отступ сверху */
+    left: 65%;  /* Центрируем по горизонтали */
+    transform: translateX(-50%);  /* Корректируем для точного центрирования */
+    z-index: 2;  /* Размещаем поверх фона */
+}
+
+/* Картинка по центру */
+.centered-image {
+    max-width: 30%;  /* Ограничиваем ширину картинки */
+    height: auto;    /* Сохраняем пропорции картинки */
+    border-radius: 10px;  /* Скругление углов картинки */
+}
+
+/* Контейнер с основным контентом (список бутылок) */
+.container {
+    position: relative;
+    z-index: 1;  /* Контент будет под картинкой */
+    background-color: rgba(0, 0, 0, 0.6);  /* Полупрозрачный фон для контента */
+    color: white;  /* Белый текст для контраста */
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 150px;  /* Отступ сверху, чтобы контент не перекрывался */
+    width: 80%;
+}
+/* Общий стиль для всех кнопок */
+.btn {
+    text-decoration: none;  /* Убираем подчеркивание */
+    padding: 10px 20px;  /* Отступы для кнопки */
+    margin: 5px;  /* Отступы между кнопками */
+    border-radius: 5px;  /* Скругленные углы */
+    font-size: 16px;  /* Размер шрифта */
+    font-weight: bold;  /* Жирный шрифт */
+    display: inline-block;  /* Кнопка не растягивается на всю ширину */
+    transition: all 0.3s ease;  /* Плавное изменение при наведении */
+}
+
+/* Стиль кнопки "Редактировать" */
+.btn-edit {
+    background-color: #4CAF50;  /* Зеленый */
+    color: white;
+}
+
+.btn-edit:hover {
+    background-color: #45a049;  /* Темно-зеленый при наведении */
+}
+
+/* Стиль кнопки "Рассчитать" */
+.btn-calculate {
+    background-color: #2196F3;  /* Голубой */
+    color: white;
+}
+
+.btn-calculate:hover {
+    background-color: #0b7dda;  /* Темно-голубой при наведении */
+}
+
+/* Стиль кнопки "Удалить" */
+.btn-delete {
+    background-color: #f44336;  /* Красный */
+    color: white;
+}
+
+.btn-delete:hover {
+    background-color: #da190b;  /* Темно-красный при наведении */
+}
+
+/* Стиль кнопки "Добавить новую бутылку" */
+.btn-create {
+    background-color: #FF9800;  /* Оранжевый */
+    color: white;
+}
+
+.btn-create:hover {
+    background-color: #e68900;  /* Темно-оранжевый при наведении */
+}
+
+/* При наведении на любую кнопку */
+.btn:hover {
+    cursor: pointer;  /* Указатель при наведении */
+    transform: translateY(-2px);  /* Немного поднимаем кнопку при наведении */
+}
+
+/* Контейнер для кнопок (если нужно) */
+ul li {
+    display: inline;  /* Делаем кнопки на одной строке */
+    margin-right: 10px;  /* Отступ между кнопками */
+}
+/* Увеличиваем шрифт для названия бутылки */
+.container ul li {
+    font-size: 18px;  /* Устанавливаем размер шрифта для названия бутылки */
+    line-height: 1.5;  /* Увеличиваем межстрочный интервал для удобства */
+}
+
+/* Можно также сделать более выразительный шрифт для названия */
+.container ul li span.bottle-name {
+    font-size: 30px;  /* Увеличиваем размер шрифта для названия бутылки */
+    font-weight: bold;  /* Делаем название более заметным */
+    color:#F0FFF0;  /* Добавим красивый цвет для названия (можно изменить по вкусу) */
+}

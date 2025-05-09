@@ -1,0 +1,20 @@
+{% extends 'main/base.html' %}
+
+{% block title %}Рассчитать оставшийся объём{% endblock %}
+
+{% block content %}
+    <h1>Рассчитать оставшийся объём для "{{ bottle.name }}"</h1>
+
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-calc">Рассчитать</button>
+    </form>
+
+    {% if remaining_volume %}
+    <div style="margin-top: 130px;">   
+    <h2>Оставшийся объём: {{ remaining_volume|floatformat:0 }} мл</h2>
+        <a href="{% url 'bottle_list' %}" class="btn btn-back">Назад к списку бутылок</a>
+    {% endif %}
+    </div>  
+{% endblock %}
